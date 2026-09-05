@@ -21,7 +21,10 @@ async function calculate() {
         let spanshURL = new URL("https://spansh.co.uk/api/search/systems")
         spanshURL.searchParams.append("q", sysName)
 
-        let response = await fetch(spanshURL)
+        // need to use corsproxy because of github reasons
+        let proxyURL = `https://corsproxy.io/?url=${encodeURIComponent(spanshURL)}`
+
+        let response = await fetch(proxyURL)
         if (!response.ok) {
             throw new Error(`HTTP Error. Status: ${response.status}`)
         }
