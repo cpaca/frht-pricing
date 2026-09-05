@@ -22,7 +22,7 @@ async function calculate() {
         spanshURL.searchParams.append("q", sysName)
 
         // need to use corsproxy because of github reasons
-        let proxyURL = `https://corsproxy.io/?url=${encodeURIComponent(spanshURL)}`
+        let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
 
         let response = await fetch(proxyURL)
         if (!response.ok) {
