@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Main header</h1>
+    <!-- <h1>Main header</h1> -->
 
     <!-- HTML form isn't correct here as github.io can't take HTTP POST -->
     <label for="sys-name">
@@ -20,12 +20,12 @@
         <input id="num-tons" name="num-tons" type="number" />
     </label>
 
-    <label for="planetary">
+    <label for="planetaryDropoff">
         Is the target a planetary dropoff
-        <input id="planetary" name="planetary" type="checkbox" />
+        <input id="planetaryDropoff" name="planetaryDropoff" type="checkbox" />
     </label>
 
-    <input id="calculate" value="Calculate" type="submit" />
+    <input id="calculate" value="Calculate" type="button" />
     
     <script src="script.js"></script>
 
@@ -46,9 +46,16 @@
         No target-system calculated
     </p>
 
-    <p id="Price">
-        No target-system calculated
-    </p>
+    <ul>
+        <li id="Base price">(Not calculated)</li>
+        <li id="Jump Fee">(Not calculated)</li>
+        <li id="Planetary Fee">(Not calculated)</li>
+        <li id="Total Per Ton">(Not calculated)</li>
+    </ul>
+
+    <h1 id="TOTAL PRICE">
+        (Not calculated)
+    </h1>
 
 </body>
 </html>
