@@ -8,7 +8,47 @@
 </head>
 <body>
     <h1>Main header</h1>
+
+    <!-- HTML form isn't correct here as github.io can't take HTTP POST -->
+    <label for="sys-name">
+        System name
+        <input id="sys-name" name="sys-name" type="search" />
+    </label>
+
+    <label for="num-tons">
+        Number of tons
+        <input id="num-tons" name="num-tons" type="number" />
+    </label>
+
+    <label for="planetary">
+        Is the target a planetary dropoff
+        <input id="planetary" name="planetary" type="checkbox" />
+    </label>
+
+    <input id="calculate" value="Calculate" type="submit" />
     
     <script src="script.js"></script>
+
+    <p id="Warnings">
+        <strong> This is just an estimate: These do not represent real FRHT prices! </strong>
+        To err on the side of caution, this calculator uses 495Ly/jump, but real prices use actual # of FC jumps
+    </p>
+
+    <p id="Errors">
+        Errors: None detected.
+    </p>
+
+    <p id="System">
+        No target-system calculated
+    </p>
+
+    <p id="Coords">
+        No target-system calculated
+    </p>
+
+    <p id="Price">
+        No target-system calculated
+    </p>
+
 </body>
 </html>

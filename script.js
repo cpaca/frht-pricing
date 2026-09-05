@@ -1,13 +1,4 @@
 /* TODO:
-Need a text input w/ label that says "System name"
--> input type = search, to remove newline objects
-Need a text input w/ label that says "Number of tons"
--> input type = number
-Need a checkbox w/ label that says "Planetary drop-off location"
-Need a button that says "Calculate"
-See "Warning TODOs"
-Need a box for Errors:
-
 Calculation TODOs:
 Read text from "Number of tons"
 -> turn into number, throw new Error if fail
@@ -29,10 +20,6 @@ if planetaryDeliveries:
     pricePerTon += 10k
 
 totalPrice = pricePerTon * numTons
-
-Warning TODOs:
--> This is just an estimate: These do not represent real FRHT prices!
--> To err on the side of caution, this calculator uses 495Ly/jump, but real prices use actual # of FC jumps
 
 */
 console.log("Start of script.js")
