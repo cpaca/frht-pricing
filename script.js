@@ -96,6 +96,7 @@ async function calculate() {
         totalPrice.textContent = `TOTAL PRICE: ${totalPrice}`
 
     } catch (error) {
+        let errMsg = error.message
         errElement.textContent = errMsg
     }
 }
