@@ -24,9 +24,9 @@ async function calculate() {
         // trying to avoid cors
         // There are NOT a lot of options which don't require API keys :/
         // "oh just get an API key" I'd have to put it in the PUBLIC github pages repo.
-        // let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
+        let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
         // let proxyURL = `https://cors-anywhere.com/${encodeURIComponent(spanshURL)}`
-        let proxyURL = `https://api.cors.lol/?url=${encodeURIComponent(spanshURL)}`
+        // let proxyURL = `https://api.cors.lol/?url=${encodeURIComponent(spanshURL)}`
 
         console.log("Proxy URL:")
         console.log(`${proxyURL}`)
