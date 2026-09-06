@@ -101,7 +101,7 @@ async function calculate() {
         // totalPrice = pricePerTon * numTons
         let totalPrice = pricePerTon * numTons
         let totalPriceEle = document.getElementById("TOTAL PRICE")
-        totalPriceEle.textContent = `TOTAL PRICE: ${totalPrice}`
+        totalPriceEle.textContent = `TOTAL PRICE: ${totalPrice.toLocaleString()}`
         errElement.innerHTML = "Done calculating."
     } catch (error) {
         errElement.innerHTML = "<strong>Error caught</strong>"
