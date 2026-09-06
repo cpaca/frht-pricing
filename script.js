@@ -29,8 +29,15 @@ async function calculate() {
             throw new Error(`HTTP Error. Status: ${response.status}`)
         }
 
-        let data = response.json()
-        let results = data["results"]
+        // PROXY HANDLING:
+        let status = response["status"]
+        if (status["http_code"] != 200) {
+            throw new Error(`HTTP Error. Proxy-Status: ${status["http_code"]}`)
+        }
+        let spanshData = JSON.parse(response["contents"])
+        // END OF PROXY HANDLING
+
+        let results = spanshData["results"]
 
         if (results.length < 1) {
             throw new Error(`Spansh error: Returned ${results.length} systems`)
