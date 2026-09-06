@@ -55,7 +55,7 @@ async function calculate() {
         let sysEle = document.getElementById("System")
         let coordsEle = document.getElementById("Coords")
         sysEle.textContent = realName
-        coordsele.textContent = `(${x1}, ${y1}, ${z1})`
+        coordsEle.textContent = `(${x1}, ${y1}, ${z1})`
 
         // HQ - HIP 52675
         // HIP 52675: Need Coords
