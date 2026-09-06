@@ -21,8 +21,10 @@ async function calculate() {
         let spanshURL = new URL("https://spansh.co.uk/api/search/systems")
         spanshURL.searchParams.append("q", sysName)
 
-        // need to use corsproxy because of github reasons
-        let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
+        // trying to avoid cors
+        // needs api keys :/ annoying
+        // let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
+        let proxyURL = `https://cors-anywhere.com/${encodeURIComponent(spanshURL)}`
 
         console.log("Proxy URL:")
         console.log(`${proxyURL}`)
