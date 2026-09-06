@@ -30,11 +30,12 @@ async function calculate() {
         }
 
         // PROXY HANDLING:
-        let status = response["status"]
+        let proxyJson = response.json()
+        let status = proxyJson["status"]
         if (status["http_code"] != 200) {
             throw new Error(`HTTP Error. Proxy-Status: ${status["http_code"]}`)
         }
-        let spanshData = JSON.parse(response["contents"])
+        let spanshData = JSON.parse(proxyJson["contents"])
         // END OF PROXY HANDLING
 
         let results = spanshData["results"]
