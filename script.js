@@ -24,6 +24,8 @@ async function calculate() {
         // need to use corsproxy because of github reasons
         let proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(spanshURL)}`
 
+        console.log("Proxy URL:")
+        console.log(`${proxyURL}`)
         let response = await fetch(proxyURL)
         if (!response.ok) {
             throw new Error(`HTTP Error. Status: ${response.status}`)
