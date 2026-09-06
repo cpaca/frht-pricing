@@ -7,7 +7,7 @@ async function calculate() {
     let errElement = document.getElementById("Errors")
     try {
         console.log("Calculate() called")
-        errElement.textContent = "Thinking..."
+        errElement.innerHTML = "Thinking..."
         // Read text from "Number of tons"
         // -> turn into number, throw new Error if fail
         let numTons = parseInt(document.getElementById("num-tons").value)
@@ -102,9 +102,9 @@ async function calculate() {
         let totalPrice = pricePerTon * numTons
         let totalPriceEle = document.getElementById("TOTAL PRICE")
         totalPrice.textContent = `TOTAL PRICE: ${totalPrice}`
-
+        errElement.innerHTML = "Done calculating."
     } catch (error) {
-        errElement.textContent = "<strong>Error caught</strong>"
+        errElement.innerHTML = "<strong>Error caught</strong>"
         throw error
     }
 }
