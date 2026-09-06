@@ -54,8 +54,8 @@ async function calculate() {
         // -> need to print coordinates and name of "found system"
         let sysEle = document.getElementById("System")
         let coordsEle = document.getElementById("Coords")
-        sysEle.textContent = realName
-        coordsEle.textContent = `(${x1}, ${y1}, ${z1})`
+        sysEle.innerHTML = `<strong>Target system name:</strong> ${realName}`
+        coordsEle.innerHTML = `<strong>Target system coordinates:</strong> (${x1}, ${y1}, ${z1})`
 
         // HQ - HIP 52675
         // HIP 52675: Need Coords
@@ -101,7 +101,7 @@ async function calculate() {
         // totalPrice = pricePerTon * numTons
         let totalPrice = pricePerTon * numTons
         let totalPriceEle = document.getElementById("TOTAL PRICE")
-        totalPrice.textContent = `TOTAL PRICE: ${totalPrice}`
+        totalPriceEle.textContent = `TOTAL PRICE: ${totalPrice}`
         errElement.innerHTML = "Done calculating."
     } catch (error) {
         errElement.innerHTML = "<strong>Error caught</strong>"
