@@ -30,7 +30,7 @@ async function calculate() {
         }
 
         // PROXY HANDLING:
-        let proxyJson = response.json()
+        let proxyJson = await response.json()
         let status = proxyJson["status"]
         if (status["http_code"] != 200) {
             throw new Error(`HTTP Error. Proxy-Status: ${status["http_code"]}`)
